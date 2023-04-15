@@ -1,21 +1,12 @@
 "use strict";
 
-const foo = () => {
-  console.log("hii");
-};
+class Typing {
+  constructor(option) {
+    this.title = document.querySelector(".title");
+    this.delay = option.delay;
+    this.interval = option.interval;
 
-// setTimeout(() => {
-//     foo()
-// }, 3000);
-
-setInterval(() => {
-  console.log("hiiii");
-}, 1000);
-
-interval();
-
-// function clear() {
-//   clearInterval(interval);
-// }
-
-// clear();
+    this.text = this.title.innerHTML.trim();
+    this.title.innerHTML = "";
+  }
+}
